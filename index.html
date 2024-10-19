@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Personal Savings Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Personal Savings Manager</h1>
+        <input type="text" id="userName" placeholder="Enter your name" required />
+        <input type="number" id="userAge" placeholder="Enter your age" />
+        
+        <select id="userGender">
+            <option value="" disabled selected>Select your gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        
+        <input type="tel" id="userPhone" placeholder="Enter your phone number" />
+        <input type="email" id="userEmail" placeholder="Enter your email address" />
+        <button id="submitName">Submit</button>
+    </div>
+    <script>
+        document.getElementById('submitName').addEventListener('click', function() {
+            const name = document.getElementById('userName').value;
+            const age = document.getElementById('userAge').value;
+            const gender = document.getElementById('userGender').value;
+            const phone = document.getElementById('userPhone').value;
+            const email = document.getElementById('userEmail').value;
+
+            if (name) {
+                alert('Welcome, ' + name + '!');
+                window.location.href = 'ABC.html';
+            } else {
+                alert('Please enter your name.');
+            }
+        });
+    </script>
+</body>
+</html>
