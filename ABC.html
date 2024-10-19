@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Savings Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Savings Manager</h1>
+        
+        <input type="text" id="goal" placeholder="Enter savings goal" />
+        <p class="description">Your savings goal is the total amount you want to save for a specific purpose (e.g., vacation, emergency fund).</p>
+        
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <p class="description">The amount is the specific sum of money you plan to contribute towards your savings goal.</p>
+        
+        <button id="add">Add Savings</button>
+        
+        <input type="text" id="expenseDescription" placeholder="Enter expense description" />
+        <input type="number" id="expenseAmount" placeholder="Enter expense amount" />
+        <button id="addExpense">Add Expense</button>
+        
+        <h2>Set Bill Reminder</h2>
+        <input type="text" id="billDescription" placeholder="Enter bill description" />
+        <input type="date" id="billDate" />
+        <button id="setReminder">Set Reminder</button>
+        
+        <h2>Financial Overview</h2>
+        <div class="chart-container"> <!-- New container for centering -->
+            <canvas id="financialChart" width="400" height="400"></canvas>
+        </div>
+        
+        <div id="savingsList" class="savings-list"></div>
+        <h2>Total Savings: <span id="totalSavings">$0</span></h2>
+        
+        <h2>Options:</h2>
+        <button id="showBudgetOptions">Show Budget Savings Options</button>
+        <button id="showBillReminders">Show Bill Reminders</button>
+        
+        <div id="budgetOptions" class="savings-list" style="display: none;">
+            <h3>Budget Savings Options</h3>
+            <button id="viewBudgetSuggestions">View Budget Suggestions</button>
+        </div>
+        
+        <div id="remindersOptions" class="savings-list" style="display: none;">
+            <h3>Bill Reminders</h3>
+            <button id="viewReminders">View Reminders</button>
+        </div>
+        
+        <div id="budgetSuggestions" class="savings-list" style="display: none;"></div> <!-- Initially hidden -->
+        <div id="remindersList" class="savings-list" style="display: none;"></div> <!-- Initially hidden -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
